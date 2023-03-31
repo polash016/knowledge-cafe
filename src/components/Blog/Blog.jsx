@@ -22,9 +22,8 @@ const Blog = (props) => {
           <div className="">
             <p className="">
               {time} Min Read 
-              <span onClick={()=>props.handleReadTime(props.blog,id)}>
+              <span className="cursor-pointer" onClick={()=>props.handleReadBlog(props.blog, id)}>
               <FontAwesomeIcon icon={faBookmark} />
-              {/* <FontAwesomeIcon icon="fa-light fa-bookmark" /> */}
               </span>
             </p>
           </div>
@@ -36,7 +35,7 @@ const Blog = (props) => {
           <div className="badge badge-outline">#beginners</div>
           <div className="badge badge-outline">#programming</div>
         </div>
-      <a className="text-left mt-8 underline text-blue-500" href="/index.html">Mark as read</a>
+      <a onClick={()=>props.handleReadTime(props.blog)} className="text-left mt-8 underline text-blue-500" ><button>Mark as read</button></a>
       </div>
     </div>
   );

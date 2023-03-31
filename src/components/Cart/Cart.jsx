@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Cart = ({cart}) => {
+const Cart = ({cart,time}) => {
     let totalTime = 0;
-    for(const blog of cart){
+    for(const blog of time){
         totalTime = totalTime + parseInt(blog.time)
     }
     return (
@@ -11,7 +11,7 @@ const Cart = ({cart}) => {
             <div>
                 <h1 className='mb-4 text-2xl font-bold'>Bookmarked Blog:{cart.length}</h1>
                 {
-                    cart.map(blog=><h2 className='mt-4 mb-4 bg-white border rounded-lg text-lg font-semibold'>{blog.description}</h2>)
+                    cart.map(blog=><h2 className='mt-4 mb-4 bg-white border rounded-lg text-lg font-semibold' key={blog.id}>{blog.description}</h2>)
                 }
             </div>
         </div>
