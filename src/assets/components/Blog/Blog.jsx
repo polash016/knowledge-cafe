@@ -21,7 +21,7 @@ const Blog = (props) => {
           </div>
           <div className="">
             <p className="">
-              {time} Min Read{" "}
+              {time} Min Read 
               <span onClick={()=>props.handleReadTime(props.blog,id)}>
               <FontAwesomeIcon icon={faBookmark} />
               {/* <FontAwesomeIcon icon="fa-light fa-bookmark" /> */}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
 import Blog from "../Blog/Blog";
 import Cart from "../Cart/Cart";
 
@@ -15,9 +16,10 @@ const Blogs = () => {
       
       const existed = time.find(blog => blog.id == id)
         if(existed){
-          toast.success('why')
+          toast.error('Already Bookmarked')
         }
         else{
+          toast('Succesfully Bookmarked')
           const newTime = [...time,blog];
         setTime(newTime)
         }
