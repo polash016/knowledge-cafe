@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import Blog from "../Blog/Blog";
 import Cart from "../Cart/Cart";
 
@@ -10,18 +11,25 @@ const Blogs = () => {
         .then(res => res.json())
         .then(data => setBlogs(data))
     },[]);
-    const handleReadTime = (blog) => {
-        const newTime = [...time,blog];
+    const handleReadTime = (blog,id) => {
+      
+      const existed = time.find(blog => blog.id == id)
+        if(existed){
+          toast.success('why')
+        }
+        else{
+          const newTime = [...time,blog];
         setTime(newTime)
+        }
     };
   return (
-    <div className="md:flex lg:flex w-[95%] mx-auto">
-      <div className="">
+    <div className="grid grid-cols-4 w-[95%] mx-auto">
+      <div className="col-span-3">
         {
             blogs.map(blog=><Blog key={blog.id} blog={blog} handleReadTime={handleReadTime}></Blog>)
         }
       </div>
-      <div className="w-[40%]">
+      <div className="bg-slate-100">
         <Cart cart={time}></Cart>
       </div>
     </div>

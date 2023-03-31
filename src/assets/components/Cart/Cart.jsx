@@ -7,11 +7,11 @@ const Cart = ({cart}) => {
     }
     return (
         <div className='sticky top-0'>
-            <h3>Spent Time On Read: {totalTime} min</h3>
+            <h3 className='mb-4 text-emerald-400 border rounded-lg border-emerald-500  text-2xl font-bold'>Spent Time On Read: {totalTime} min</h3>
             <div>
-                <h1>Bookmarked Blog:{cart.length}</h1>
+                <h1 className='mb-4 text-2xl font-bold'>Bookmarked Blog:{cart.length}</h1>
                 {
-                    cart.map(blog=><h2>{blog.description}</h2>)
+                    cart.map(blog=><h2 className='mt-4 mb-4 bg-white border rounded-lg text-lg font-semibold'>{blog.description}</h2>)
                 }
             </div>
         </div>
