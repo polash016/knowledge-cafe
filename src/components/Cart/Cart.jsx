@@ -6,7 +6,7 @@ const Cart = ({cart,time}) => {
         totalTime = totalTime + parseInt(blog.time)
     }
     return (
-        <div className='sticky top-0'>
+        <div className='md:sticky top-0'>
             <h3 className='mb-4 text-emerald-400 border rounded-lg border-emerald-500  text-2xl font-bold'>Spent Time On Read: {totalTime} min</h3>
             <div>
                 <h1 className='mb-4 text-2xl font-bold'>Bookmarked Blog:{cart.length}</h1>

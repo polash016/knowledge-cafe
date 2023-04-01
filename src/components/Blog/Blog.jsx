@@ -12,15 +12,15 @@ const Blog = (props) => {
         </figure>
 
         <div className="flex justify-between items-center gap-4 pt-6">
-          <div className="flex gap-4">
+          <div className="md:flex gap-4">
             <img className="rounded-full w-12 h-12" src={profile} alt="" />
             <div>
               <p className="text-xl font-bold">{name}</p>
               <p className="text-base font-light">{published}(04 Days Ago)</p>
             </div>
           </div>
-          <div className="">
-            <p className="">
+          <div>
+            <p>
               {time} Min Read 
               <span className="cursor-pointer" onClick={()=>props.handleReadBlog(props.blog, id)}>
               <FontAwesomeIcon icon={faBookmark} />
