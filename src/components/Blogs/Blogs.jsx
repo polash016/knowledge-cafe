@@ -28,7 +28,7 @@ const Blogs = () => {
     setReadTime(newReadTime);
   };
   return (
-    <div className="md:grid md:grid-cols-4 w-[95%] mx-auto">
+    <div className="md:grid md:grid-cols-4 w-[95%] mx-auto pb-4">
       <div className="col-span-3">
         {blogs.map((blog) => (
           <Blog

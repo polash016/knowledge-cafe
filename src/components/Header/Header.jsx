@@ -3,7 +3,7 @@ import headerPic from '../../../public/header.jpg'
 
 const Header = () => {
     return (
-        <div className='w-[95%] mx-auto shadow border rounded-xl mb-4'>
+        <div className='w-auto md:w-[95%] mx-auto shadow border rounded-xl mb-4'>
             <div className="navbar bg-base-100">
   <div className="flex-1">
     <a className="btn btn-ghost normal-case text-xl">Programming Blog</a>
@@ -16,16 +16,7 @@ const Header = () => {
           <img src={headerPic} />
         </div>
       </label>
-      <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-        <li>
-          <a className="justify-between">
-            Profile
-            <span className="badge">New</span>
-          </a>
-        </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
-      </ul>
+      
     </div>
   </div>
 </div>
