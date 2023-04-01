@@ -16,7 +16,7 @@ const Blog = (props) => {
             <img className="rounded-full w-12 h-12" src={profile} alt="" />
             <div>
               <p className="text-xl font-bold">{name}</p>
-              <small className=" font-light">{published}(04 Months Ago)</small>
+              <small className=" font-light">{published}</small>
             </div>
           </div>
           <div>
